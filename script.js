@@ -1,4 +1,3 @@
-
 const header = document.getElementById('main-header');
 const heroProfileImg = document.getElementById('hero-profile-img');
 const title = document.getElementById('hero-title');
