@@ -140,7 +140,7 @@ body {
 }
 .hero-profile-img.scrolled {
   top: 10px;
-  left: 24px; /* Align with header and logo */
+  left: 352px; /* Align with header and logo */
   width: 48px;
   height: 48px;
   transform: translate(0, 0);
