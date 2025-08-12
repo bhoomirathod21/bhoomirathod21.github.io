@@ -82,16 +82,32 @@ body {
 }
 #main-header.scrolled .container {
   justify-content: flex-start;
-  align-items: center; /* Ensure vertical alignment */
-  gap: 16px;           /* Add spacing between logo and menu */
+  align-items: center;
+  gap: 16px;
+  transition: justify-content 0.5s, gap 0.5s;
 }
+
+#main-header.scrolled nav {
+  justify-content: flex-end;
+  width: 100%;
+  display: flex;
+  transition: justify-content 0.5s;
+}
+
+#main-header.scrolled nav ul {
+  justify-content: flex-end;
+  gap: 2rem;
+  width: auto;
+  transition: justify-content 0.5s, gap 0.5s;
+}
+
 #main-header.scrolled .logo {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
-  margin-right: 16px;  /* Space between logo and menu */
+  margin-right: 16px;
   display: flex;
-  align-items: center; /* Vertically center logo */
+  align-items: center;
 }
 
 /* Hero Section */
