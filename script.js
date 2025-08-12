@@ -1,31 +1,22 @@
-const header = document.getElementById('main-header');
-const heroProfileImg = document.getElementById('hero-profile-img');
-const title = document.getElementById('hero-title');
-const subtitle = document.getElementById('hero-subtitle');
+const header = document.getElementById("main-header");
+const headerLogo = document.getElementById("header-logo");
+const heroImg = document.getElementById("hero-profile-img");
 
-let scrolled = false;
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    if (!header.classList.contains("scrolled")) {
+      header.classList.add("scrolled");
 
-window.addEventListener('scroll', function () {
-  const scrollY = window.scrollY;
-
-  if (scrollY > 10 && !scrolled) {
-    header.classList.add('scrolled');
-    heroProfileImg.classList.add('scrolled');
-    
-    // Animate title out & subtitle in
-    title.classList.add('scrolled-title');
-    subtitle.classList.add('scrolled-subtitle');
-
-    scrolled = true;
-  } 
-  else if (scrollY <= 10 && scrolled) {
-    header.classList.remove('scrolled');
-    heroProfileImg.classList.remove('scrolled');
-    
-    // Reset animations
-    title.classList.remove('scrolled-title');
-    subtitle.classList.remove('scrolled-subtitle');
-
-    scrolled = false;
+      // Move profile image into header logo
+      const logoImg = heroImg.cloneNode(true);
+      logoImg.style.height = "40px";
+      logoImg.style.width = "40px";
+      logoImg.style.objectFit = "cover";
+      headerLogo.innerHTML = "";
+      headerLogo.appendChild(logoImg);
+    }
+  } else {
+    header.classList.remove("scrolled");
+    headerLogo.innerHTML = ""; // Remove logo
   }
 });
