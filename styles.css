@@ -60,15 +60,16 @@ html {
 }
 
 #main-header .container {
+    background: white;
+    box-shadow: 0 4px 24px rgba(76, 27, 228, 0.08);
     height: 70px;
-    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+    border: 1px solid rgba(76, 27, 228, 0.1);
 }
-
 #main-header nav {
   width: 100%;
   display: flex;
