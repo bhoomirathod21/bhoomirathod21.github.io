@@ -222,6 +222,6 @@ body {
 }
 @media (max-width: 1200px) {
   .hero-profile-img.scrolled {
-    left: calc(50vw - 50% + 24px);
+    left: 24px; /* Aligns with header/logo at all screen sizes up to 1200px */
   }
 }
