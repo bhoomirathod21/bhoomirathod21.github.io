@@ -28,3 +28,9 @@ window.addEventListener('scroll', function () {
 
 // Set timestamp
 document.getElementById('timestamp').textContent = new Date().toLocaleString();
+
+// To stop scrolling
+document.body.classList.add('stop-scroll');
+
+// To allow scrolling again
+document.body.classList.remove('stop-scroll');
