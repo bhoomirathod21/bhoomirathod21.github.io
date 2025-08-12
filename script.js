@@ -18,13 +18,11 @@ window.addEventListener('scroll', function () {
   const title = document.getElementById('hero-title');
   const subtitle = document.getElementById('hero-subtitle');
   if (window.scrollY > 10) {
-    title.style.opacity = '0';
-    subtitle.style.opacity = '1';
-    subtitle.style.pointerEvents = 'auto';
+    title.classList.add('scrolled-title');
+    subtitle.classList.add('scrolled-subtitle');
   } else {
-    title.style.opacity = '1';
-    subtitle.style.opacity = '0';
-    subtitle.style.pointerEvents = 'none';
+    title.classList.remove('scrolled-title');
+    subtitle.classList.remove('scrolled-subtitle');
   }
 });
 

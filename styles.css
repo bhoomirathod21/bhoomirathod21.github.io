@@ -165,7 +165,7 @@ body {
   z-index: 2;
 }
 .hero h1 {
-  font-size: 3rem;
+  font-size: 10rem;
   margin-bottom: 1rem;
 }
 .hero p {
@@ -189,7 +189,38 @@ body {
 
 /* New transitions for title and subtitle */
 #hero-title, #hero-subtitle {
-  transition: opacity 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 
+    opacity 0.7s cubic-bezier(0.4,0,0.2,1),
+    transform 0.7s cubic-bezier(0.4,0,0.2,1),
+    font-size 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+
+#hero-title {
+  opacity: 1;
+  z-index: 2;
+}
+
+#hero-subtitle {
+  opacity: 0;
+  font-size: 2rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scrolled-title {
+  opacity: 0;
+  transform: translate(-50%, -80%) scale(0.8);
+}
+
+.scrolled-subtitle {
+  opacity: 1;
+  font-size: 3rem;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
 }
 
 /* Content Section */
