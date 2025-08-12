@@ -48,6 +48,8 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;                /* Make ul take full width */
+  justify-content: space-evenly; /* Distribute menu items equally */
 }
 #main-header .logo {
   font-size: 2rem;
