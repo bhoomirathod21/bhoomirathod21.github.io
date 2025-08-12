@@ -154,10 +154,14 @@ body {
 }
 
 .hero-img-placeholder {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 2rem;
-  opacity: 0;
+    display: flex;
+    width: 1200px;
+    height: auto;
+    margin-bottom: 238px;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .hero-content {
