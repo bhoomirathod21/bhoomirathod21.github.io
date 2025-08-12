@@ -1,10 +1,17 @@
 /* General Reset */
 body {
   margin: 0;
-  font-family: 'Inter Tight', 'Boldonse', 'Arges', sans-serif; /* Added Arges */
+  font-family: 'Inter Tight', 'Boldonse', 'Arges', sans-serif;
   background: #f4f4f4;
   padding-top: 70px;
   overflow-x: hidden;
+}
+
+/* Optional: Boldonse font utility class */
+.boldonse-regular {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Header */
@@ -86,21 +93,18 @@ body {
   gap: 16px;
   transition: justify-content 0.5s, gap 0.5s;
 }
-
 #main-header.scrolled nav {
   justify-content: flex-end;
   width: 100%;
   display: flex;
   transition: justify-content 0.5s;
 }
-
 #main-header.scrolled nav ul {
   justify-content: flex-end;
   gap: 2rem;
   width: auto;
   transition: justify-content 0.5s, gap 0.5s;
 }
-
 #main-header.scrolled .logo {
   opacity: 1;
   transform: translateX(0);
