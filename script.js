@@ -189,20 +189,3 @@ const Portfolio = {
         // Handle navigation
         this.handleNavigation(href);
       });
-    }); // Closing brace added here
-  },
-
-  // Handle navigation logic
-  handleNavigation(href) {
-    // Example logic: scroll to the section or load a new page
-    const targetElement = document.querySelector(href);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.location.href = href; // Fallback to normal navigation
-    }
-  },
-};
-
-// Initialize the application
-Portfolio.init();
