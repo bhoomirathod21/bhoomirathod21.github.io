@@ -4,6 +4,7 @@ body {
   font-family: 'Inter Tight', 'Boldonse', 'Arges', sans-serif;
   background: #6cf66e;
   overflow-x: hidden;
+
 }
 
 /* Optional: Boldonse font utility class */
@@ -14,7 +15,6 @@ body {
 }
 
 /* Header */
-
 #main-header {
     top: 0;
     left: 0;
