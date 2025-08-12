@@ -21,7 +21,7 @@ body {
     left: 0px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 32px;
     z-index: 1000;
-    max-width: 1200px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
