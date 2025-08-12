@@ -1,145 +1,99 @@
-/* General Reset */
+/* ------------------- RESET ------------------- */
 body {
   margin: 0;
-  font-family: 'Inter Tight', 'Boldonse', 'Arges', sans-serif;
+  font-family: 'Inter Tight', 'Boldonse', sans-serif;
   background: #6cf66e;
   padding-top: 70px;
   overflow-x: hidden;
 }
-
-/* Optional: Boldonse font utility class */
 .boldonse-regular {
   font-family: "Boldonse", system-ui;
   font-weight: 400;
-  font-style: normal;
 }
 
-/* Header */
+/* ------------------- HEADER ------------------- */
 #main-header {
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   background: #fff;
+  border-radius: 0 0 24px 24px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.12);
   z-index: 1000;
-  border-radius: 0 0 24px 24px;
-  padding: 0 32px;
-  max-width: 1200px;
-  margin: 24px auto 0 auto;
-  transition: background 0.3s, box-shadow 0.3s, margin 0.3s;
   display: flex;
   justify-content: center;
-  align-items: center;
+  transition: all 0.3s;
+  max-width: 1200px;
+  margin: 24px auto 0;
+  padding: 0 32px;
 }
 #main-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: #f9f9ff;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(76,27,228,0.08);
   padding: 0 32px;
   height: 70px;
+  width: 100%;
   max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#main-header nav {
-  flex: 1;
-  display: flex;
-}
-#main-header nav ul {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 #main-header .logo {
   font-size: 2rem;
   font-weight: bold;
   color: #4c1be4;
-  margin-right: 24px;
-  opacity: 1;
-  transform: none;
-  pointer-events: auto;
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.5s;
+}
+#main-header nav ul {
   display: flex;
-  align-items: center;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 #main-header nav ul li a {
   text-decoration: none;
   color: #4c1be4;
   font-size: 1.1rem;
   font-weight: 500;
-  transition: color 0.3s;
   padding: 8px 16px;
   border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
 }
 #main-header nav ul li a:hover {
   background: #eae6ff;
   color: #007bff;
 }
 
-/* Header scroll states */
-#main-header:not(.scrolled) .container {
-  justify-content: center;
-}
-#main-header:not(.scrolled) nav ul {
-  gap: 3rem;
-  transform: translateX(0);
-  justify-content: space-between;
-}
-#main-header:not(.scrolled) .logo {
-  opacity: 0;
-  transform: translateX(-40px);
-}
-#main-header.scrolled .container {
-  justify-content: flex-start;
-  align-items: center;
-  gap: 16px;
-  transition: justify-content 0.5s, gap 0.5s;
-}
-#main-header.scrolled nav {
-  justify-content: flex-end;
-  width: 100%;
-  display: flex;
-  transition: justify-content 0.5s;
-}
-#main-header.scrolled nav ul {
-  justify-content: flex-end;
-  gap: 2rem;
-  width: auto;
-  transition: justify-content 0.5s, gap 0.5s;
-}
+/* Header - Scrolled State */
 #main-header.scrolled .logo {
   opacity: 1;
   transform: translateX(0);
-  pointer-events: auto;
-  margin-right: 16px;
-  display: flex;
-  align-items: center;
+}
+#main-header.scrolled nav ul {
+  gap: 2rem;
 }
 
-/* Hero Section */
+/* ------------------- HERO ------------------- */
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #5bf67a; /* Updated background color */
-  color: #fff;
   text-align: center;
-  position: relative;
+  color: #fff;
 }
-
-/* Profile image */
 .hero-profile-img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  object-fit: cover;
   border: 4px solid #fff;
+  object-fit: cover;
   box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   position: fixed;
   top: 40%;
@@ -150,108 +104,32 @@ body {
 }
 .hero-profile-img.scrolled {
   top: 10px;
-  left: 352px; /* Align with header and logo */
+  left: 352px;
   width: 48px;
   height: 48px;
-  transform: translate(0, 0);
   border: 2px solid #007bff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  z-index: 1001;
 }
-
-.hero-img-placeholder {
-    display: flex;
-    width: 1200px;
-    height: auto;
-    margin-bottom: 238px;
-    opacity: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.hero-content {
-  position: relative;
-  height: 200px;
-}
-
-#hero-title, #hero-subtitle {
-  position: static;
-  opacity: 1;
-  font-size: inherit;
-  transform: none;
-  transition: none;
-}
-
-#hero-title {
+.hero h1 {
   font-size: 3rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
 }
-
-#hero-subtitle {
+.hero h3 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  pointer-events: auto;
 }
 
-/* Content Section */
-.content-section {
-  padding: 4rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  background: #fff;
-  margin-top: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-.content-section h2 {
-  color: #333;
-  margin-bottom: 2rem;
-}
-.content-section p {
-  line-height: 1.6;
-  color: #666;
-  margin-bottom: 1.5rem;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .hero-profile-img.scrolled {
-    left: 16px;
-    top: 20px;
-  }
-  #main-header .container {
-    padding: 0 16px;
-    gap: 8px;
-  }
-}
+/* ------------------- RESPONSIVE ------------------- */
 @media (max-width: 1200px) {
-  .hero-profile-img.scrolled {
-    left: 24px; /* Aligns with header/logo at all screen sizes up to 1200px */
-  }
+  .hero-profile-img.scrolled { left: 24px; }
 }
 @media (max-width: 800px) {
-  #main-header {
-    padding: 0 8px;
-    border-radius: 0 0 12px 12px;
-    max-width: 100vw;
-    margin: 8px auto 0 auto;
-  }
-  #main-header .container {
-    padding: 0 8px;
-    max-width: 100vw;
-  }
-  #main-header .logo {
-    font-size: 1.3rem;
-    margin-right: 12px;
-  }
-  #main-header nav ul {
-    gap: 1rem;
-  }
+  #main-header { padding: 0 8px; border-radius: 0 0 12px 12px; margin: 8px auto 0; }
+  #main-header .container { padding: 0 8px; }
+  #main-header .logo { font-size: 1.3rem; margin-right: 12px; }
+  #main-header nav ul { gap: 1rem; }
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2rem; }
+  .hero h3 { font-size: 1rem; }
+  .hero-profile-img.scrolled { left: 16px; top: 20px; }
 }
