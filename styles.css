@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: 'Inter Tight', 'Boldonse', 'Arges', sans-serif;
   background: #6cf66e;
+
   overflow-x: hidden;
 }
 
@@ -21,6 +22,7 @@ body {
     left: 0px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 32px;
     z-index: 1000;
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
