@@ -1,6 +1,9 @@
 
 const header = document.getElementById('main-header');
 const heroProfileImg = document.getElementById('hero-profile-img');
+const title = document.getElementById('hero-title');
+const subtitle = document.getElementById('hero-subtitle');
+
 let scrolled = false;
 
 window.addEventListener('scroll', function () {
@@ -9,23 +12,21 @@ window.addEventListener('scroll', function () {
   if (scrollY > 10 && !scrolled) {
     header.classList.add('scrolled');
     heroProfileImg.classList.add('scrolled');
-    scrolled = true;
-  } else if (scrollY <= 10 && scrolled) {
-    header.classList.remove('scrolled');
-    heroProfileImg.classList.remove('scrolled');
-    scrolled = false;
-  }
-
-  const title = document.getElementById('hero-title');
-  const subtitle = document.getElementById('hero-subtitle');
-  if (window.scrollY > 10) {
+    
+    // Animate title out & subtitle in
     title.classList.add('scrolled-title');
     subtitle.classList.add('scrolled-subtitle');
-  } else {
+
+    scrolled = true;
+  } 
+  else if (scrollY <= 10 && scrolled) {
+    header.classList.remove('scrolled');
+    heroProfileImg.classList.remove('scrolled');
+    
+    // Reset animations
     title.classList.remove('scrolled-title');
     subtitle.classList.remove('scrolled-subtitle');
+
+    scrolled = false;
   }
 });
-
-// Set timestamp
-document.getElementById('timestamp').textContent = new Date().toLocaleString();
