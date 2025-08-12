@@ -82,17 +82,16 @@ body {
 }
 #main-header.scrolled .container {
   justify-content: flex-start;
+  align-items: center; /* Ensure vertical alignment */
+  gap: 16px;           /* Add spacing between logo and menu */
 }
 #main-header.scrolled .logo {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
-}
-#main-header.scrolled nav ul {
-  margin-left: auto;
-  gap: 2.5rem;
-  transform: translateX(40px);
-  justify-content: flex-end;
+  margin-right: 16px;  /* Space between logo and menu */
+  display: flex;
+  align-items: center; /* Vertically center logo */
 }
 
 /* Hero Section */
@@ -126,7 +125,7 @@ body {
 }
 .hero-profile-img.scrolled {
   top: 34px;
-  left: calc(50% - 590px + 24px);
+  left: 24px; /* Align with header and logo */
   width: 48px;
   height: 48px;
   transform: translate(0, 0);
@@ -199,9 +198,11 @@ body {
   }
   .hero-profile-img.scrolled {
     left: 16px;
+    top: 20px;
   }
   #main-header .container {
     padding: 0 16px;
+    gap: 8px;
   }
 }
 @media (max-width: 1200px) {
