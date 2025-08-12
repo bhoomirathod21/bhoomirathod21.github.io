@@ -4,6 +4,7 @@ body {
   font-family: 'Inter Tight', 'Boldonse', 'Arges', sans-serif;
   background: #6cf66e;
   overflow-x: hidden;
+  overflow-y: hidden; /* Add this line to disable vertical scrolling */
 }
 
 /* Optional: Boldonse font utility class */
