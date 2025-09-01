@@ -130,11 +130,10 @@ body {
 
 /* Hero profile image that will transform to logo */
 .hero-profile-img {
-  width: 1000px;
-  height: 1000px;
+  width: 820px;
+  height: 420px;
   border-radius: 20%;
   object-fit: cover;
-  border: 4px solid #fff;
   box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   margin-bottom: 2rem;
   position: fixed;
