@@ -3,6 +3,7 @@ body {
   font-family: "Antonio", sans-serif;
   font-weight: 400; /* default regular */
   font-style: normal;
+  margin: 0;
 }
 
 /* If you want a special class */
