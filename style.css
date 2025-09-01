@@ -167,10 +167,14 @@ body {
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  height: 1024px;
-  width: 1024px;
+    position: relative;
+    z-index: 2;
+    height: 1024px;
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .hero h1 {
