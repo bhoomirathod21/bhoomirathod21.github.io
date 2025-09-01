@@ -174,7 +174,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+}
+.hero-content-inner {
+    align-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+    flex: 1 0 0px;
     flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0px;
+    height: 100vh;
+    justify-content: center;
+    max-width: 50%;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 1px;
+    will-change: var(--framer-will-change-effect-override, transform);
 }
 
 .hero h1 {
