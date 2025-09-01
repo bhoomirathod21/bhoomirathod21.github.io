@@ -4,8 +4,7 @@ body {
   font-weight: 400; /* default regular */
   font-style: normal;
   margin: 0;
-  background-color: #1c1c1c; /* Base dark background */
-  background-image: 
+  background-color: black
     repeating-radial-gradient(circle at 0 0, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 100%),
     repeating-radial-gradient(circle at 100% 100%, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 100%);
   background-size: 200px 200px, 300px 300px;
