@@ -128,7 +128,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
   color: #fff;
   text-align: center;
   position: relative;
@@ -173,6 +172,8 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
+  height: 1024px;
+  width: 1024px;
 }
 
 .hero h1 {
