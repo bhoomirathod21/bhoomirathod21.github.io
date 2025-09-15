@@ -1,20 +1,48 @@
 const header = document.getElementById('main-header');
-const heroProfileImg = document.getElementById('hero-profile-img');
-let scrolled = false;
+    const heroProfileImg = document.getElementById('hero-profile-img');
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let scrolled = false;
 
-window.addEventListener('scroll', function() {
-  const scrollY = window.scrollY;
-  
-  if(scrollY > 10 && !scrolled) {
-    header.classList.add('scrolled');
-    heroProfileImg.classList.add('scrolled');
-    scrolled = true;
-  } else if(scrollY <= 10 && scrolled) {
-    header.classList.remove('scrolled');
-    heroProfileImg.classList.remove('scrolled');
-    scrolled = false;
-  }
-});
+    // Scroll functionality
+    window.addEventListener('scroll', function() {
+      const scrollY = window.scrollY;
+      
+      if(scrollY > 10 && !scrolled) {
+        header.classList.add('scrolled');
+        heroProfileImg.classList.add('scrolled');
+        scrolled = true;
+      } else if(scrollY <= 10 && scrolled) {
+        header.classList.remove('scrolled');
+        heroProfileImg.classList.remove('scrolled');
+        scrolled = false;
+      }
+    });
 
-// Set timestamp on page load
-document.getElementById('timestamp').textContent = new Date().toLocaleString();
+    // Hamburger menu functionality
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+    });
+
+    // Close mobile menu function
+    function closeMobileMenu() {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close mobile menu when clicking outside
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close mobile menu on window resize if open
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 767) {
+        closeMobileMenu();
+      }
+    });
