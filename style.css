@@ -294,7 +294,7 @@ body {
     overflow: hidden;
     padding: 0;
     position: relative;
-    width: 1px;
+    width: 500px;
     will-change: var(--framer-will-change-effect-override, transform);
 }
 .hero-content-inner2 {
@@ -311,7 +311,7 @@ body {
     overflow: hidden;
     padding: 0;
     position: relative;
-    width: 1px;
+    width: 500px;
     will-change: var(--framer-will-change-effect-override, transform);
 }
 
