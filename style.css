@@ -284,7 +284,6 @@ body {
     align-content: flex-end;
     align-items: flex-start;
     display: flex;
-    flex: 1 0 0px;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 0px;
@@ -301,7 +300,6 @@ body {
    align-content: flex-end;
     align-items: flex-end;
     display: flex;
-    flex: 1 0 0px;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 0px;
