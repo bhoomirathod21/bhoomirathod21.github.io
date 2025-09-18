@@ -282,7 +282,7 @@ body {
 
 .hero-content-inner {
     align-content: flex-end;
-    align-items: flex-end;
+    align-items: flex-start;
     display: flex;
     flex: 1 0 0px;
     flex-direction: column;
