@@ -305,7 +305,8 @@ body {
 }
 
 .hero p {
-  font-size: 5rem;
+  font-size: 24px;
+  color: black;
   margin: 0;
 }
 
