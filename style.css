@@ -267,8 +267,8 @@ body {
     justify-content: center;
     align-items: flex-start;
     flex-direction: row;
-    padding-top: 20%;
 }
+
 .hero-content-inner {
     align-content: flex-end;
     align-items: flex-end;
@@ -297,7 +297,7 @@ body {
     gap: 48px;
     height: 100vh;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
     max-width: 50%;
     overflow: hidden;
     padding: 0;
