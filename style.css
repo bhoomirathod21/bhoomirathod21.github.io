@@ -287,6 +287,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 48px;
+    top:48px;
     height: 100vh;
     justify-content: center;
     max-width: 50%;
@@ -303,6 +304,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 68px;
+    top:48px;
     height: 100vh;
     justify-content: center;
     max-width: 50%;
