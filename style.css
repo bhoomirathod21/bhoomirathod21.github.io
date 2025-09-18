@@ -281,12 +281,12 @@ body {
 
 .hero h1 {
   font-size: 10rem;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .hero p {
   font-size: 5rem;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .timestamp-text {
