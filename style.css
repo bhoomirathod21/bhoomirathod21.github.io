@@ -263,16 +263,21 @@ body {
   opacity: 0;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    height: 1200px;
-    width: 1200px;
-    max-width: 100%;
+.hero-content  {
+    align-content: center;
+    align-items: center;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex: none;
     flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
 }
 
 .hero-content-inner {
