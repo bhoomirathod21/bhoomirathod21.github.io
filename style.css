@@ -237,7 +237,7 @@ body {
   width: 48px;
   height: 48px;
   transform: translate(0, 0);
-  border: 2px solid #007bff;
+  border: 2px solid;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   z-index: 1001;
 }
