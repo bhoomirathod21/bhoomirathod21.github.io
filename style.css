@@ -270,7 +270,7 @@ body {
     flex: none;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 48px;
     height: 100vh;
     justify-content: center;
     overflow: hidden;
@@ -287,7 +287,7 @@ body {
     
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 0px;
+    gap: 48px;
     height: 100vh;
     justify-content: center;
     max-width: 50%;
