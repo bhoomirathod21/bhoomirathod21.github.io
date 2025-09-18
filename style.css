@@ -13,6 +13,12 @@ body {
   font-weight: 700; /* bold version */
   font-style: normal;
 }
+h1 {
+  margin: 0; /* removes top & bottom space */
+  padding: 0; /* optional: clears padding too */
+  font-size: 2em;
+  font-weight: bold;
+}
 
 
 
