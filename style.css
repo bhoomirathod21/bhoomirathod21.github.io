@@ -297,7 +297,7 @@ body {
     will-change: var(--framer-will-change-effect-override, transform);
 }
 .hero-content-inner2 {
-   align-content: flex-end;
+
     align-items: flex-end;
     display: flex;
     flex-direction: column;
