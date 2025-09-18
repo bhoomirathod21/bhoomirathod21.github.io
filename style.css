@@ -287,10 +287,9 @@ body {
     flex: 1 0 0px;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 48px;
+    gap: 0px;
     height: 100vh;
     justify-content: center;
-    align-items: flex-start;
     max-width: 50%;
     overflow: hidden;
     padding: 0;
@@ -299,16 +298,15 @@ body {
     will-change: var(--framer-will-change-effect-override, transform);
 }
 .hero-content-inner2 {
-    align-content: flex-end;
+   align-content: flex-end;
     align-items: flex-end;
     display: flex;
     flex: 1 0 0px;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 48px;
+    gap: 0px;
     height: 100vh;
     justify-content: center;
-    align-items: flex-end;
     max-width: 50%;
     overflow: hidden;
     padding: 0;
