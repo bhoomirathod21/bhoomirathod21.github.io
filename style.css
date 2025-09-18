@@ -260,7 +260,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding-top: 20%;
+    padding-top: 48px;
 }
 .hero-content-inner {
     align-content: flex-end;
