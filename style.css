@@ -284,9 +284,10 @@ body {
     align-content: flex-end;
     align-items: flex-start;
     display: flex;
+    
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 48px;
+    gap: 0px;
     height: 100vh;
     justify-content: center;
     max-width: 50%;
@@ -300,9 +301,10 @@ body {
    align-content: flex-end;
     align-items: flex-end;
     display: flex;
+    
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 48px;
+    gap: 0px;
     height: 100vh;
     justify-content: center;
     max-width: 50%;
