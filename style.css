@@ -13,12 +13,6 @@ body {
   font-weight: 700; /* bold version */
   font-style: normal;
 }
-h1 {
-  margin: 0; /* removes top & bottom space */
-  padding: 0; /* optional: clears padding too */
-  font-size: 2em;
-  font-weight: bold;
-}
 
 
 
@@ -287,12 +281,12 @@ h1 {
 
 .hero h1 {
   font-size: 10rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .hero p {
   font-size: 5rem;
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .timestamp-text {
