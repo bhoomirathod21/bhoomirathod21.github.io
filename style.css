@@ -271,7 +271,7 @@ body {
     flex-wrap: nowrap;
     gap: 48px;
     height: 100vh;
-    justify-content: center;
+    justify-content: flex-start;
     max-width: 50%;
     overflow: hidden;
     padding: 0;
@@ -288,7 +288,7 @@ body {
     flex-wrap: nowrap;
     gap: 48px;
     height: 100vh;
-    justify-content: center;
+    justify-content: flex-start;
     max-width: 50%;
     overflow: hidden;
     padding: 0;
