@@ -279,6 +279,7 @@ body {
     gap: 48px;
     height: 100vh;
     justify-content: center;
+    align-items: flex-start;
     max-width: 50%;
     overflow: hidden;
     padding: 0;
@@ -296,6 +297,7 @@ body {
     gap: 48px;
     height: 100vh;
     justify-content: center;
+    align-items: flex-start;
     max-width: 50%;
     overflow: hidden;
     padding: 0;
