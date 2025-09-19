@@ -84,39 +84,36 @@ mobileMenu.querySelectorAll('a').forEach(link => {
     });
 
   //cards
+let hscrollTrigger;
+let refreshTimeout;
 
-  gsap.registerPlugin(ScrollTrigger);
+function safeRefresh(delay = 200) {
+  clearTimeout(refreshTimeout);
+  refreshTimeout = setTimeout(() => {
+    if (window.innerWidth > 991) ScrollTrigger.refresh();
+  }, delay);
+}
 
-let container = document.querySelector(".cards-container");
-let cards = container.querySelectorAll(".card");
+function initHorizontalScroll() {
+  let container = document.querySelector(".technology-heading-block");
+  let totalWidth = document.querySelector(".slides-track").scrollWidth;
+  let moveDistance = totalWidth - container.offsetWidth;
 
-let scrollDistance = container.scrollWidth - window.innerWidth;
+  if (hscrollTrigger) hscrollTrigger.kill();
 
-let tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".horizontal-section",
-    start: "top top",
-    end: () => "+=" + scrollDistance,
-    scrub: 1,
-    pin: true,
-    anticipatePin: 1
-  }
-});
-
-tl.to(container, { x: -scrollDistance, ease: "none" });
-
-// Animate cards
-cards.forEach((card, index) => {
-  gsap.fromTo(card, { opacity: 0, y: 100 }, {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    delay: index * 0.1,
+  hscrollTrigger = gsap.to(".slides-track", {
+    x: -moveDistance,
+    ease: "none",
     scrollTrigger: {
-      trigger: card,
-      start: "left 80%",
-      containerAnimation: tl
+      trigger: ".hscroll",
+      start: "top 15%",
+      end: "+=" + moveDistance,
+      scrub: 1.2,
+      pin: true,
+      pinSpacing: true,
     }
   });
-});
-// End of cards
+}
+
+window.addEventListener("load", initHorizontalScroll);
+window.addEventListener("resize", () => safeRefresh(100));
