@@ -1,11 +1,41 @@
+const header = document.getElementById('main-header');
+const heroProfileImg = document.getElementById('hero-profile-img');
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+let scrolled = false;
 
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
+// Scroll effect for header & hero
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        if (!scrolled) {
+            header.classList.add('scrolled');
+            heroProfileImg.classList.add('scrolled');
+            scrolled = true;
+        }
+    } else {
+        if (scrolled) {
+            header.classList.remove('scrolled');
+            heroProfileImg.classList.remove('scrolled');
+            scrolled = false;
+        }
+    }
+});
 
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
+// Hamburger toggle
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active'); // animate hamburger
+    mobileMenu.classList.toggle('active'); // show/hide mobile menu
+});
+
+// Optional: close mobile menu when clicking a link
+mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
     });
+});
+// Optional: close mobile menu when clicking outside
+
 
 
 
