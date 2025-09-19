@@ -318,7 +318,7 @@ body {
     will-change: var(--framer-will-change-effect-override, transform);
 }
 .hero-content-inner2 {
-    width: 340px;
+    
     align-items: flex-end;
     display: flex;
     flex-direction: column;
@@ -360,6 +360,7 @@ body {
 }
 
 .hero p {
+  
   font-family: "Antonio", sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -368,6 +369,7 @@ body {
 }
 
 .hero-content-inner2 p {
+  width: 340px;
   font-family: "Inter", sans-serif;  /* clean subtext */
   font-size: 24px;
   font-weight: 400;
