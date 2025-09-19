@@ -459,6 +459,7 @@ h5 { font-size: 1.25rem;} /* 20px */
   display: flex;
   align-items: center;
   position: relative;
+  background: var(--color-accent)
 }
 
 .cards-container {
