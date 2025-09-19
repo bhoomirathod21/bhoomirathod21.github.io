@@ -376,9 +376,10 @@ body {
 }
 
 /* Responsive styles for smaller screens */
- @media (min-width: 1200px) {
+   @media (min-width: 1200px) {
       #main-header .container {
         max-width: 1400px;
+        padding: 0 16px; /* keep consistent */
       }
 
       .hero h1 {
@@ -395,8 +396,13 @@ body {
       }
     }
 
-    /* TABLET - Medium screens (768px to 1199px) */
+/* TABLET - Medium screens (768px to 1199px) */
     @media (min-width: 768px) and (max-width: 1199px) {
+
+      #main-header .container {
+        padding: 0 16px; /* keep consistent */
+      }
+
       #main-header nav ul {
         gap: 2rem;
       }
@@ -434,9 +440,9 @@ body {
       }
 
       #main-header .container {
-        padding: 0 20px;
+        padding: 0 16px; /* consistent, instead of 20px */
         justify-content: space-between;
-      }
+     }
 
       #main-header.scrolled .container {
         justify-content: flex-start;
@@ -485,6 +491,11 @@ body {
 
     /* Extra small mobile screens (480px and below) */
     @media (max-width: 480px) {
+
+      #main-header .container {
+      padding: 0 16px; /* consistent */
+      }
+
       .hero h1 {
         font-size: 2rem;
       }
