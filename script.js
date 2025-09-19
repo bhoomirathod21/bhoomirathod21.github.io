@@ -1,8 +1,13 @@
-const header = document.getElementById('main-header');
-    const heroProfileImg = document.getElementById('hero-profile-img');
+
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
-    let scrolled = false;
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+
 
     // Scroll functionality
     window.addEventListener('scroll', function() {
@@ -84,11 +89,3 @@ cards.forEach((card, index) => {
   });
 });
 // End of cards
-
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  mobileMenu.classList.toggle('active');
-});
