@@ -71,7 +71,7 @@ h5 { font-size: 1.25rem;} /* 20px */
 /* Header styles */
     #main-header {
       position: fixed;
-      top: 16px;
+      top: 24px;
       left: 50%;
       transform: translateX(-50%);   /* center horizontally only */
       width: 100%;
@@ -82,8 +82,7 @@ h5 { font-size: 1.25rem;} /* 20px */
       padding: 16px;                 /* ✅ 16px on all sides */
       background: white;
       backdrop-filter: blur(5px);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 2px solid var(--border);
       z-index: 1000;
     }
 
