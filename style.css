@@ -224,7 +224,7 @@ body {
     #main-header.scrolled nav ul {
       margin-left: auto;
       gap: 2.5rem;
-      transform: translateX(40px);
+      /*transform: translateX(40px);*/
       justify-content: flex-end;
     }
 
