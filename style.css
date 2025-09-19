@@ -263,6 +263,27 @@ h5 { font-size: 1.25rem;} /* 20px */
     z-index: 1;
 }
 
+
+/* Hero section scroll styles */
+
+.hero.scrolled {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+
 /* Hero profile image that will transform to logo */
 .hero-profile-img {
     width: 400px;
