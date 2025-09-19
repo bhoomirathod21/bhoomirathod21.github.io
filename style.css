@@ -266,16 +266,16 @@ h5 { font-size: 1.25rem;} /* 20px */
 
 /* Hero section scroll styles */
 
-.hero.scrolled {
+.hero-content.scrolled {
+    display: flex;
     align-content: center;
     align-items: center;
-    display: flex;
+    justify-content: center;
     flex: none;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 10px;
     height: 100vh;
-    justify-content: center;
     overflow: hidden;
     padding: 0;
     position: relative;
