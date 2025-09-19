@@ -401,9 +401,9 @@ h5 { font-size: 1.25rem;} /* 20px */
 .hero-content-inner2 p {
   width: 340px;
   font-family: "Inter", sans-serif;  /* clean subtext */
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
-  color: #555;
+  color: var(--text-sub);
   margin: 0.5rem 0 0;
 }
 
