@@ -36,7 +36,24 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 });
 // Optional: close mobile menu when clicking outside
 
+// hero//
 
+const heroContent = document.querySelector(".hero-content");
+const heroInner1 = document.querySelector(".hero-content-inner");
+const heroInner2 = document.querySelector(".hero-content-inner2");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    heroContent.classList.add("scrolled");
+    heroInner1.classList.add("scrolled");
+    heroInner2.classList.add("scrolled");
+  } else {
+    heroContent.classList.remove("scrolled");
+    heroInner1.classList.remove("scrolled");
+    heroInner2.classList.remove("scrolled");
+  }
+});
+// ========================================//
 
 
 

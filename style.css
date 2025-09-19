@@ -368,22 +368,33 @@ h5 { font-size: 1.25rem;} /* 20px */
     width: 500px;
     will-change: var(--framer-will-change-effect-override, transform);
 }
+/* ------------ */
 
-.hero-content-inner2.scrolled{
-    align-items: flex-start;
-    font-size: x-large;
-    font-weight: bold;
-    gap: 48px;
-    height: 100vh;
-    justify-content: center;
-    max-width: 50%;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    width: 500px;
-    will-change: var(--framer-will-change-effect-override, transform)
+.hero-content.scrolled {
+  flex-direction: column;  /* stack vertically */
+  gap: 24px;
+  width: 100%; /* take full width */
+  height: auto;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Animate children too */
+.hero-content-inner,
+.hero-content-inner2 {
+  transition: all 0.8s ease-in-out;
+}
+
+.hero-content-inner.scrolled,
+.hero-content-inner2.scrolled {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------ */
 
 .hero h1 {
   font-size: 10rem;
