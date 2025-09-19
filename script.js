@@ -39,6 +39,7 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 
 
 
+
     // Scroll functionality
     window.addEventListener('scroll', function() {
       const scrollY = window.scrollY;
