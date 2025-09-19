@@ -77,7 +77,9 @@ h5 { font-size: 1.25rem;} /* 20px */
     display: flex;
     justify-content: center;   /* center the container */
     z-index: 1000;
-    background: transparent;
+    transform-origin: 50% 50% 0;
+    backdrop-filter: blur(5px);
+    background: white;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border-bottom: 1px solid var(--border); /* border line */
     }
