@@ -69,7 +69,7 @@ h5 { font-size: 1.25rem;} /* 20px */
 
 
 /* Header styles */
-    #main-header {
+    /* #main-header {
       position: fixed;
       top: 48px;
       width: 100%;
@@ -86,9 +86,32 @@ h5 { font-size: 1.25rem;} /* 20px */
       /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
       border: 1px solid var(--border);
       border-radius: 50px;
-    }
+    } */
 
-    
+    #main-header {
+  position: fixed;
+  top: 48px;
+  left: 0;
+  right: 0;                 /* balance both sides */
+  margin: 0 auto;           /* center horizontally */
+
+  width: 80%;               /* directly set max width */
+  max-width: 1200px;        /* optional safe cap */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+  backdrop-filter: blur(245px);
+  background: #ffffff21;
+
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  z-index: 1000;
+}
+
+
     #main-header .container {
       display: flex;
       justify-content: space-between;  /* logo left / nav right */
