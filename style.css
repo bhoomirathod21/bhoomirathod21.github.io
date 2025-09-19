@@ -143,16 +143,21 @@ h5 { font-size: 1.25rem;} /* 20px */
     }
 
     /* Hamburger Menu */
+
     .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      padding: 8px;
-      z-index: 1002;
-      transition: transform 0.3s ease;
-      position: absolute;
-      right: 20px;
+    width: 24px;
+    height: 24px;
+    /* display: flex; */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1002;
+    transition: transform 0.3s ease;
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
     }
+
 
     .hamburger:hover {
       transform: scale(1.1);
