@@ -566,7 +566,15 @@ h5 { font-size: 1.25rem;} /* 20px */
   gap: 0.5rem;
 }
 
-
+.footer {
+  text-align: center;
+  padding: 1rem;
+  height: 200vh;
+  background: red;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
 
 /* Responsive styles for smaller screens */
    @media (min-width: 1200px) {
