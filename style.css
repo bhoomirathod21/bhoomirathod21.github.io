@@ -326,12 +326,18 @@ body {
 }
 
 .hero p {
-  font-family: "Inter", sans-serif;
   font-size: 16px;
   color: rgb(48, 48, 48);
   margin: 0;
 }
-
+.hero-content-inner2 p {
+  font-family: "Inter", sans-serif;  /* clean subtext */
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  margin: 0.5rem 0 0;
+  line-height: 1.4;
+}
 .timestamp-text {
   font-size: 0.9rem;
   opacity: 0.8;
