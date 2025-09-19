@@ -315,6 +315,20 @@ body {
     will-change: var(--framer-will-change-effect-override, transform);
 }
 
+.hero-content-inner2.scrolled{
+    align-items: flex-start;
+    font-size: x-large;
+    font-weight: bold;
+    gap: 48px;
+    height: 100vh;
+    justify-content: center;
+    max-width: 50%;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 500px;
+    will-change: var(--framer-will-change-effect-override, transform)
+}
 
 
 .hero h1 {
