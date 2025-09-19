@@ -46,3 +46,41 @@ const header = document.getElementById('main-header');
         closeMobileMenu();
       }
     });
+
+  //cards
+
+  gsap.registerPlugin(ScrollTrigger);
+
+let container = document.querySelector(".cards-container");
+let cards = container.querySelectorAll(".card");
+
+let scrollDistance = container.scrollWidth - window.innerWidth;
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".horizontal-section",
+    start: "top top",
+    end: () => "+=" + scrollDistance,
+    scrub: 1,
+    pin: true,
+    anticipatePin: 1
+  }
+});
+
+tl.to(container, { x: -scrollDistance, ease: "none" });
+
+// Animate cards
+cards.forEach((card, index) => {
+  gsap.fromTo(card, { opacity: 0, y: 100 }, {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    delay: index * 0.1,
+    scrollTrigger: {
+      trigger: card,
+      start: "left 80%",
+      containerAnimation: tl
+    }
+  });
+});
+// End of cards
