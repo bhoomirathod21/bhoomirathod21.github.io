@@ -307,7 +307,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 48px;
-    top:48px;
+    top:-42px;
     height: 100vh;
     justify-content: center;
     max-width: 50%;
