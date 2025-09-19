@@ -264,7 +264,7 @@ body {
 
 /* When scrolled, transform to logo position and size - aligned with header container */
 .hero-profile-img.scrolled {
-    top: 10px;
+    top: 26px;
     left: calc(50% - 590px + 24px);
     width: 48px;
     height: 48px;
