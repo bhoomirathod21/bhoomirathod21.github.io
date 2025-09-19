@@ -75,7 +75,7 @@ h5 { font-size: 1.25rem;} /* 20px */
       width: 100%;
       left: 50%;
       transform: translate(-50%, -50%);
-      max-width: 80%;
+      max-width: 70%;
       display: flex;
       justify-content: center;
       z-index: 1000;
@@ -295,7 +295,7 @@ h5 { font-size: 1.25rem;} /* 20px */
 
 /* When scrolled, transform to logo position and size - aligned with header container */
 .hero-profile-img.scrolled {
-    top: 26px;
+    top: 22px;
     left: calc(50% - 590px + 24px);
     width: 48px;
     height: 48px;
