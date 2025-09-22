@@ -101,15 +101,10 @@ window.addEventListener("scroll", () => {
     });
 
 
-    const heroItems = document.querySelectorAll('.hero-content > *');
+  const hero = document.querySelector('.hero-content');
 
 window.addEventListener('scroll', () => {
-  const triggerPoint = window.innerHeight * 0.8;
-  
-  heroItems.forEach((item, i) => {
-    const itemTop = item.getBoundingClientRect().top;
-    if (itemTop < triggerPoint) {
-      setTimeout(() => item.classList.add('visible'), i * 150); // staggered delay
-    }
-  });
+  let scrollY = window.scrollY;
+  // Move content upward slightly as you scroll
+  hero.style.transform = `translateY(${scrollY * 0.3}px)`;
 });
