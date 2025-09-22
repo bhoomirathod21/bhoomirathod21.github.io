@@ -704,6 +704,25 @@ h5 { font-size: 1.25rem;} /* 20px */
         display: flex;
       }
 
+      #main-header {
+        position: fixed;
+        top: 68px;
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 80%;
+        display: flex;
+        justify-content: center;
+        z-index: 1000;
+        padding: 24px;
+        transform-origin: 50% 50% 0;
+        backdrop-filter: blur(245px);
+        background: #ffffff21;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border: 1px solid var(--border);
+        border-radius: 50px;
+    }
+
       #main-header .container {
         padding: 0 16px; /* consistent, instead of 20px */
         justify-content: space-between;
