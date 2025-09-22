@@ -301,7 +301,7 @@ h5 { font-size: 1.25rem;} /* 20px */
 /* When scrolled, transform to logo position and size - aligned with header container */
 .hero-profile-img.scrolled {
     top: 22px;
-    left: calc(50% - 590px + 24px);
+    left: calc(51.2% - 590px + 24px);
     width: 48px;
     height: 48px;
     transform: translate(0, 0);
