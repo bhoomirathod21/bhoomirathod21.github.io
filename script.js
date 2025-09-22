@@ -101,10 +101,64 @@ window.addEventListener("scroll", () => {
     });
 
 
+    
+(function(){
+  const GAP = 48; // gap in px
   const hero = document.querySelector('.hero-content');
+  if (!hero) return console.warn('No .hero-content found on page.');
 
-window.addEventListener('scroll', () => {
-  let scrollY = window.scrollY;
-  // Move content upward slightly as you scroll
-  hero.style.transform = `translateY(${scrollY * 0.3}px)`;
-});
+  const items = Array.from(hero.children);
+  let cache = [];
+
+  function measure() {
+    const heroRect = hero.getBoundingClientRect();
+    const heights = items.map(el => el.getBoundingClientRect().height);
+    const totalHeight = heights.reduce((a,b) => a + b, 0) + (items.length - 1) * GAP;
+    const startY = (heroRect.height - totalHeight) / 2;
+
+    let cum = 0;
+    cache = items.map((el, i) => {
+      const rect = el.getBoundingClientRect();
+      const originalTop = rect.top - heroRect.top;
+      const computed = window.getComputedStyle(el).transform;
+      const computedTransform = (computed && computed !== 'none') ? computed : '';
+      const targetTop = startY + cum;
+      cum += heights[i] + GAP;
+      return {
+        el,
+        originalTop,
+        computedTransform,
+        targetTop,
+        delta: targetTop - originalTop
+      };
+    });
+  }
+
+  function update() {
+    const heroRect = hero.getBoundingClientRect();
+    const start = window.innerHeight * 0.9;
+    const end = 0;
+    let progress = (start - heroRect.top) / (start - end);
+    progress = Math.max(0, Math.min(1, progress));
+
+    cache.forEach(c => {
+      const translateY = c.delta * progress;
+      c.el.style.transform = (c.computedTransform ? c.computedTransform + ' ' : '') + `translateY(${translateY}px)`;
+      c.el.style.willChange = 'transform';
+    });
+  }
+
+  let ticking = false;
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(() => { update(); ticking = false; });
+      ticking = true;
+    }
+  }
+
+  measure();
+  update();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', () => { measure(); update(); });
+  window.addEventListener('load', () => { measure(); update(); });
+})();
