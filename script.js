@@ -99,3 +99,17 @@ window.addEventListener("scroll", () => {
         closeMobileMenu();
       }
     });
+
+
+    const heroItems = document.querySelectorAll('.hero-content > *');
+
+window.addEventListener('scroll', () => {
+  const triggerPoint = window.innerHeight * 0.8;
+  
+  heroItems.forEach((item, i) => {
+    const itemTop = item.getBoundingClientRect().top;
+    if (itemTop < triggerPoint) {
+      setTimeout(() => item.classList.add('visible'), i * 150); // staggered delay
+    }
+  });
+});
