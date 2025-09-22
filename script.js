@@ -101,21 +101,3 @@ window.addEventListener("scroll", () => {
     });
 
 
-
-    const hero = document.querySelector('.hero-content');
-const placeholder = document.querySelector('.hero-img-placeholder');
-const inner1 = document.querySelector('.hero-content-inner');
-const inner2 = document.querySelector('.hero-content-inner2');
-
-window.addEventListener('scroll', () => {
-  const trigger = window.innerHeight * 0.3; // adjust trigger point
-  const heroTop = hero.getBoundingClientRect().top;
-
-  if (heroTop < trigger) {
-    placeholder.classList.add('active');
-    hero.classList.add('hero-content-placeholder-active');
-  } else {
-    placeholder.classList.remove('active');
-    hero.classList.remove('hero-content-placeholder-active');
-  }
-});

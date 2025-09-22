@@ -811,29 +811,4 @@ h5 { font-size: 1.25rem;} /* 20px */
 
     }
 
-
-
-    /* Initially hide the placeholder */
-.hero-img-placeholder {
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.6s ease-in-out;
-}
-
-/* When active (e.g., .active class added via JS) */
-.hero-img-placeholder.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Hide the original inner content when placeholder is active */
-.hero-content-inner,
-.hero-content-inner2 {
-  transition: all 0.6s ease-in-out;
-}
-
-.hero-content-placeholder-active .hero-content-inner,
-.hero-content-placeholder-active .hero-content-inner2 {
-  opacity: 0;
-  pointer-events: none;
-}
+  }
