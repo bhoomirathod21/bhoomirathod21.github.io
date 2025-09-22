@@ -79,7 +79,7 @@ h5 { font-size: 1.25rem;} /* 20px */
       display: flex;
       justify-content: center;
       z-index: 1000;
-      padding: 24px;
+      padding: 16px;
       transform-origin: 50% 50% 0;
       backdrop-filter: blur(245px);
       background: #ffffff21;
