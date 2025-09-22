@@ -446,6 +446,7 @@ h5 { font-size: 1.25rem;} /* 20px */
   --border-color: var(--color-accent);
   --border-style: solid;
 
+  font-family: "Antonio", sans-serif;
   display: inline-block;
   padding: 0.6rem 1.5rem;
   font-size: 1rem;
