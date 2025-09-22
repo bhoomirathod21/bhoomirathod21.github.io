@@ -311,7 +311,7 @@ h5 { font-size: 1.25rem;} /* 20px */
 }
 
 /* Placeholder in hero content to maintain layout */
-.hero-img-placeholder {
+hero-content-inner1 {
   width: 200px;
   position: sticky;
   top: 0;
@@ -328,14 +328,14 @@ h5 { font-size: 1.25rem;} /* 20px */
 }
 /* -------------- */
 /* Use sticky + scroll to fade in placeholder */
-.hero-img-placeholder h1,
-.hero-img-placeholder h2 {
+.hero-content-inner1 h1,
+.hero-content-inner1 h2 {
   margin: 0;
 }
 
 /* Trick: fade in placeholder as you scroll using sticky */
-.hero-img-placeholder:in-view, 
-.hero-img-placeholder:target {
+.hero-content-inner1:in-view, 
+.hero-content-inner1:target {
   opacity: 1;
 }
 
