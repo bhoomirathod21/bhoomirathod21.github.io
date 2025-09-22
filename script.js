@@ -100,23 +100,3 @@ window.addEventListener("scroll", () => {
       }
     });
 
-
- // hero-scroll.js
-window.addEventListener("scroll", () => {
-  const heroContent = document.querySelector(".hero-content");
-  const heroInner1 = document.querySelector(".hero-content-inner");
-  const heroInner2 = document.querySelector(".hero-content-inner2");
-
-  if (!heroContent) return;
-
-  // When scrolled past 100px, switch to column layout
-  if (window.scrollY > 100) {
-    heroContent.classList.add("scrolled");
-    heroInner1?.classList.add("scrolled");
-    heroInner2?.classList.add("scrolled");
-  } else {
-    heroContent.classList.remove("scrolled");
-    heroInner1?.classList.remove("scrolled");
-    heroInner2?.classList.remove("scrolled");
-  }
-});
