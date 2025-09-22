@@ -581,7 +581,7 @@ h5 { font-size: 1.25rem;} /* 20px */
       }
 
       .hero-profile-img.scrolled {
-        left: calc(50% - 700px + 24px);
+        left: calc(51.2% - 700px + 24px);
       }
     }
 
