@@ -438,21 +438,37 @@ h5 { font-size: 1.25rem;} /* 20px */
   opacity: 0.8;
 }
 
-.hero .cta-btn {
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  color: #fff;
-  background: #5a67e0;
-  border: none;
-  border-radius: 5px;
+.btn {
+  --border-bottom-width: 1px;
+  --border-left-width: 1px;
+  --border-right-width: 1px;
+  --border-top-width: 1px;
+  --border-color: var(--color-accent);
+  --border-style: solid;
+
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: var(--border-color);
+  background-color: transparent;
+  border-radius: 30px;
+  border: var(--border-top-width) var(--border-style) var(--border-color);
+  opacity: 1;
+  will-change: auto;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
-.hero .cta-btn:hover {
-  background: #0056b3;
+.btn:hover {
+  background-color: var(--border-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(159, 86, 199, 0.3);
 }
+
 
 /* Content section to demonstrate scrolling */
 .content-section {
@@ -530,19 +546,6 @@ h5 { font-size: 1.25rem;} /* 20px */
   font-size: 18px;
 }
 
-.btn {
-  background: #000;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: #444;
-}
 
 /* Scroll indicator */
 .scroll-indicator {
@@ -727,11 +730,8 @@ h5 { font-size: 1.25rem;} /* 20px */
         margin-top: 1rem;
       }
 
-      .hero .cta-btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-      }
-    }
+
+  
 
     /* Extra small mobile screens (480px and below) */
     @media (max-width: 480px) {
